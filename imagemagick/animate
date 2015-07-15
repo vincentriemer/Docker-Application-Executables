@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-interactive=$([ -t 0 ] && echo "-it")
-
-docker run --rm $interactive \
-    -u $(id -u):$(id -g) \
-    -v $(pwd):$(pwd) \
-    -w "$(pwd)" \
-    knickers/imagemagick animate $*
